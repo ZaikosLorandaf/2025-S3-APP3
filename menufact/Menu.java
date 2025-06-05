@@ -6,13 +6,20 @@ import menufact.plats.PlatAuMenu;
 import java.util.ArrayList;
 
 public class Menu {
+    private static Menu singleton;
     private String description;
     private int courant;
     private ArrayList<PlatAuMenu> plat = new ArrayList<PlatAuMenu>();
 
-    public Menu(String description) {
+    private Menu(String description, int courant) {
         this.description = description;
     }
+
+    public static Menu getSingleton(String description, int courant) {
+       if (singleton == null)
+           singleton = new Menu(description, courant);
+       return singleton;
+   }
 
     void ajoute(PlatAuMenu p) {
         plat.add(p);
