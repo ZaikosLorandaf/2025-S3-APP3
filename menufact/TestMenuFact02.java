@@ -26,8 +26,8 @@ public class TestMenuFact02 {
         PlatSante ps4 = new PlatSante(13, "PlatSante3", 40, 11, 11, 11);
         PlatSante ps5 = new PlatSante(14, "PlatSante4", 50, 11, 11, 11);
 
-        Menu m1 = new Menu("menufact.Menu 1");
-        Menu m2 = new Menu("menufact.Menu 2");
+        Menu m1 = Menu.getSingleton("menufact.Menu 1", -1);
+        Menu m2 = Menu.getSingleton("menufact.Menu 2", -1);
 
         Facture f1 = new Facture("Ma facture");
 
@@ -198,7 +198,7 @@ public class TestMenuFact02 {
     private void test7_CreerFacture(Facture f1, Menu m1) throws FactureException {
         System.out.println("===test7_CreerFacture");
 
-        PlatChoisi platChoisi = new PlatChoisi(m1.platCourant(), 5);
+        PlatChoisi platChoisi = new PlatChoisi.PlatChoisiBuilder().setPlat(m1.platCourant()).setQuantite(5).build();
         try {
             f1.ajoutePlat(platChoisi);
         } catch (FactureException fe) {
@@ -223,7 +223,7 @@ public class TestMenuFact02 {
             throw me;
         }
 
-        PlatChoisi platChoisi = new PlatChoisi(m1.platCourant(), 5);
+        PlatChoisi platChoisi = new PlatChoisi.PlatChoisiBuilder().setPlat(m1.platCourant()).setQuantite(5).build();
         try {
             f1.ajoutePlat(platChoisi);
         } catch (FactureException fe) {

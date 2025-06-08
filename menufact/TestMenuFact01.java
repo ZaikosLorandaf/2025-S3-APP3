@@ -41,7 +41,7 @@ public class TestMenuFact01 {
             System.out.println(menu.platCourant());
 
             System.out.println("== Plat choisi");
-            PlatChoisi pch1 = new PlatChoisi(p1, 5);
+            PlatChoisi pch1 = new PlatChoisi.PlatChoisiBuilder().setPlat(p1).setQuantite(2).build();
             System.out.println(pch1);
 
             System.out.println("== New menufact.facture.Facture");
@@ -54,7 +54,7 @@ public class TestMenuFact01 {
             System.out.println(facture.sousTotal());
 
             System.out.println("== Ajout d'un plat choisie à la facture");
-            PlatChoisi pch2 = new PlatChoisi(p2, 10);
+            PlatChoisi pch2 = new PlatChoisi.PlatChoisiBuilder().setPlat(p2).setQuantite(10).build();
             facture.ajoutePlat(pch2);
             System.out.println(facture);
             System.out.println(facture.sousTotal());

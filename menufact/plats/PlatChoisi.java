@@ -6,7 +6,7 @@ public class PlatChoisi {
     private PlatAuMenu plat;
     private int quantite;
 
-    public PlatChoisi(PlatAuMenu plat, int quantite) {
+    private PlatChoisi(PlatAuMenu plat, int quantite) {
         this.plat = plat;
         this.quantite = quantite;
     }
@@ -29,5 +29,25 @@ public class PlatChoisi {
 
     public PlatAuMenu getPlat() {
         return plat;
+    }
+
+    public static class PlatChoisiBuilder {
+        private PlatAuMenu plat;
+        private int quantite;
+
+        public PlatChoisiBuilder setPlat(PlatAuMenu plat) {
+            this.plat = plat;
+            return this;
+        }
+
+        public PlatChoisiBuilder setQuantite(int quantite) {
+            this.quantite = quantite;
+            return this;
+        }
+
+        public PlatChoisi build() {
+            return new PlatChoisi(plat, quantite);
+
+        }
     }
 }
