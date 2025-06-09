@@ -17,7 +17,7 @@ public class Inventaire {
 
     public void nouveau(Ingredient ingredient, int quantity) throws IngredientException, NegativeQuantity {
         if (lesIngredients.contains(ingredient)) {
-            lesIngredients.get(lesIngredients.indexOf(ingredient)).addQuantity(quantity);
+            lesIngredients.get(lesIngredients.indexOf(ingredient)).addIngredient(quantity);
             throw new IngredientException("L'ingredient " + ingredient + " existe deja");
         }
         lesIngredients.add(ingredient);
@@ -36,7 +36,7 @@ public class Inventaire {
     }
 
     public void ajouter(Ingredient ingredient, int quantity) {
-        lesIngredients.get(lesIngredients.indexOf(ingredient)).addQuantity(quantity);
+        lesIngredients.get(lesIngredients.indexOf(ingredient)).addIngredient(quantity);
     }
 
     public void setQuantity(Ingredient ingredient, int quantity) throws NegativeQuantity {

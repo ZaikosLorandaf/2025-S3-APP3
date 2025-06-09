@@ -48,7 +48,7 @@ public class Ingredient {
         this.quantity -= quantity;
     }
 
-    public void addQuantity(int quantity) {
+    public void addIngredient(int quantity) {
         this.quantity += quantity;
     }
 }
