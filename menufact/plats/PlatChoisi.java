@@ -1,14 +1,26 @@
 package menufact.plats;
 
+import menufact.plats.Etats.CommandeState;
 import menufact.plats.PlatAuMenu;
 
 public class PlatChoisi {
     private PlatAuMenu plat;
     private int quantite;
+    private PlatState state;
 
     private PlatChoisi(PlatAuMenu plat, int quantite) {
         this.plat = plat;
         this.quantite = quantite;
+        this.state = new CommandeState();
+    }
+
+    public void setEtat(PlatState state) {
+        this.state = state;
+    }
+
+    public void treated() throws PlatException {
+        if(state == null) throw new PlatException("Impossible de servir un plat déjà servie");
+        state.treatement(this);
     }
 
     @Override
@@ -16,6 +28,7 @@ public class PlatChoisi {
         return "menufact.plats.PlatChoisi{" +
                 "quantite=" + quantite +
                 ", plat=" + plat +
+                ", state=" + state +
                 '}';
     }
 
