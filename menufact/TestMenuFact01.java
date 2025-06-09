@@ -62,23 +62,23 @@ public class TestMenuFact01 {
             System.out.println(facture.total());
             facture.ouvrir();
             System.out.println(facture);
-            System.out.println("Etat = " + facture.getState());
+            System.out.println("Etat = " + facture.getEtat());
 
             facture.fermer();
             System.out.println(facture);
-            System.out.println("Etat = " + facture.getState());
+            System.out.println("Etat = " + facture.getEtat());
 
             facture.ouvrir();
             System.out.println(facture);
-            System.out.println("Etat = " + facture.getState());
+            System.out.println("Etat = " + facture.getEtat());
 
             facture.payer();
             System.out.println(facture);
-            System.out.println("Etat = " + facture.getState());
+            System.out.println("Etat = " + facture.getEtat());
 
             facture.ouvrir();
             System.out.println(facture);
-            System.out.println("Etat = " + facture.getState());
+            System.out.println("Etat = " + facture.getEtat());
         } catch (Exception fe) {
             System.out.println(fe.getMessage());
         }
