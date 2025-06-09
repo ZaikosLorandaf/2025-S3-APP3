@@ -1,18 +1,18 @@
-package menufact.plats.Etats;
+package menufact.plats.etats;
 
 import menufact.plats.PlatChoisi;
 import menufact.plats.PlatState;
 
-public class Terminated implements PlatState {
+public class Served implements PlatState {
 
     @Override
     public void treatement(PlatChoisi plat){
-        System.out.println("Terminated");
-        plat.setEtat(new Served());
+        System.out.println("Served");
+        plat.setEtat(null);
     }
 
     @Override
     public String toString(){
-        return "Termine";
+        return "Served";
     }
 }

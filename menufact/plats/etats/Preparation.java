@@ -1,4 +1,4 @@
-package menufact.plats.Etats;
+package menufact.plats.etats;
 
 import menufact.plats.PlatChoisi;
 import menufact.plats.PlatState;

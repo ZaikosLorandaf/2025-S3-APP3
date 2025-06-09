@@ -1,6 +1,7 @@
 package menufact;
 
 import menufact.plats.PlatChoisi;
+import menufact.plats.PlatException;
 
 public class Chef implements Observer {
 
@@ -10,6 +11,7 @@ public class Chef implements Observer {
 
     public Chef(String name) {
         this.name = name;
+        this.plat = null;
     }
 
     @Override
@@ -25,6 +27,19 @@ public class Chef implements Observer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void traiter() throws PlatException {
+        if(plat == null){ return; }
+
+        plat.treated();
+    }
+
+    public PlatChoisi getPlat() {return plat;}
+
+    @Override
+    public String toString() {
+        return "Chef{" + "name=" + name + ", plat=" + plat.toString() + '}';
     }
 
 

@@ -1,7 +1,6 @@
 package menufact.plats;
 
-import menufact.plats.Etats.CommandeState;
-import menufact.plats.PlatAuMenu;
+import menufact.plats.etats.CommandeState;
 
 public class PlatChoisi {
     private PlatAuMenu plat;
