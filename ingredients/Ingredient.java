@@ -36,31 +36,19 @@ public class Ingredient {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
-        try {
-            if (quantity >= 0) {
-                this.quantity = quantity;
-                return;
-            }
+    public void setQuantity(int quantity) throws NegativeQuantity {
+        if (quantity < 0)
             throw new NegativeQuantity("Quantite d'ingredient: " + this.nom + " est insuffisante");
-        } catch (NegativeQuantity e) {
-            System.out.println(e.getMessage());
-        };
+        this.quantity = quantity;
     }
 
-    public void substractIngredient(int quantity) {
-        try {
-            if (this.quantity - quantity >= 0) {
-                this.quantity -= quantity;
-                return;
-            }
+    public void substractIngredient(int quantity) throws NegativeQuantity {
+        if (quantity < 0)
             throw new NegativeQuantity("Quantite d'ingredient: " + this.nom + " est insuffisante");
-        } catch (NegativeQuantity e) {
-            System.out.println(e.getMessage());
-        };
+        this.quantity -= quantity;
     }
 
-    public void addIngredient(int quantity) {
+    public void addQuantity(int quantity) {
         this.quantity += quantity;
     }
 }
