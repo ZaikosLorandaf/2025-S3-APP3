@@ -1,5 +1,8 @@
 package ingredients;
 
+/**
+ * Cette classe liste les quantités requises pour un plat contenant des ingrédients
+ */
 public class IngredientPlat {
     private Ingredient ingredient;
     private int quantity;

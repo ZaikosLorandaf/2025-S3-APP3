@@ -2,6 +2,10 @@ package ingredients;
 
 import menufact.exceptions.NegativeQuantity;
 
+
+/**
+ * Cette classe construit les instances d'ingrédient
+ */
 public class IngredientFactory {
 
     /**

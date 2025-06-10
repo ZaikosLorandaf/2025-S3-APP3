@@ -1,5 +1,8 @@
 package menufact.plats;
 
+/**
+ * Cette classe créer des instances pour les plats
+ */
 public class PlatFactory {
 
     /**

@@ -1,5 +1,8 @@
 package menufact.plats;
 
+/**
+ * Cette classe créer un plat enfant pour le menu
+ */
 public class PlatEnfant extends PlatAuMenu{
     private double proportion;
 

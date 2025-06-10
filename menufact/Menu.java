@@ -5,6 +5,9 @@ import menufact.plats.PlatAuMenu;
 
 import java.util.ArrayList;
 
+/**
+ * Cette classe gère l'affichage des plats au menu
+ */
 public class Menu {
     private static Menu singleton;
     private String description;

@@ -3,6 +3,9 @@ package menufact.plats.etats;
 import menufact.plats.PlatChoisi;
 import menufact.plats.PlatState;
 
+/**
+ * État de plat de type commande
+ */
 public class CommandeState implements PlatState {
 
     @Override

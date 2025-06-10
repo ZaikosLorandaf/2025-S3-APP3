@@ -6,6 +6,9 @@ import ingredients.IngredientPlat;
 
 import java.util.Iterator;
 
+/**
+ * Cette classe est la classe mère qui apparait au menu
+ */
 public class PlatAuMenu {
     private int code;
     private String description;

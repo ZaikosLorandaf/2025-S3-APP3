@@ -6,6 +6,9 @@ import inventaire.Inventaire;
 import menufact.plats.PlatChoisi;
 import menufact.plats.PlatState;
 
+/**
+ * État de plat de type Preparation
+ */
 public class Preparation implements PlatState {
     @Override
     public void treatement(PlatChoisi plat){

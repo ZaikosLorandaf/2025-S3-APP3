@@ -6,6 +6,9 @@ import menufact.plats.PlatException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Cette classe gère les Chefs et les notifies.
+ */
 public class ChefHandler {
 
     private List<Observer> observers = new ArrayList<Observer>();

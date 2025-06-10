@@ -2,6 +2,9 @@ package menufact.plats;
 
 import menufact.plats.etats.CommandeState;
 
+/**
+ * Cette classe gère les plats choisi par le client
+ */
 public class PlatChoisi {
     private PlatAuMenu plat;
     private int quantite;

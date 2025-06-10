@@ -1,5 +1,8 @@
 package menufact.plats;
 
+/**
+ * Exception pour les plats
+ */
 public class PlatException extends Exception{
     /**
      * Exception relié au plat

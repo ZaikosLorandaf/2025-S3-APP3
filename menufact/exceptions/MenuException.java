@@ -1,5 +1,8 @@
 package menufact.exceptions;
 
+/**
+ * Exception pour les menus
+ */
 public class MenuException extends Exception{
 
     /**

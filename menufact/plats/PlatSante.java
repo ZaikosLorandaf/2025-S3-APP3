@@ -2,6 +2,9 @@ package menufact.plats;
 
 import menufact.plats.PlatAuMenu;
 
+/**
+ * Cette classe créer une instance de plat santé pour le menu
+ */
 public class PlatSante extends PlatAuMenu {
     private double kcal;
     private double chol;

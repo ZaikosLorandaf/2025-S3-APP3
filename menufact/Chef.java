@@ -18,6 +18,11 @@ public class Chef implements Observer {
         this.plat = null;
     }
 
+    /**
+     * Fonction de mise à jour lorsqu'un plat est modifié
+     * @param platChoisi le nouveau plat
+     * @throws PlatException Si le plat est null, Lance une exception
+     */
     @Override
     public void update(PlatChoisi platChoisi) throws PlatException {
         System.out.println("Chef update");

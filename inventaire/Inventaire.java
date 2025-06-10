@@ -6,6 +6,9 @@ import menufact.exceptions.NegativeQuantity;
 
 import java.util.ArrayList;
 
+/**
+ * Cette classe gère l'inventaire des ingrédients
+ */
 public class Inventaire {
     private ArrayList<Ingredient> lesIngredients = new ArrayList<Ingredient>();
 
