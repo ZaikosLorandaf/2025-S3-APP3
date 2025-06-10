@@ -375,10 +375,10 @@ innerclass}</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>7</x>
+      <x>182</x>
       <y>42</y>
-      <w>784</w>
-      <h>679</h>
+      <w>609</w>
+      <h>686</h>
     </coordinates>
     <panel_attributes>Plats</panel_attributes>
     <additional_attributes/>
@@ -728,58 +728,6 @@ lt=&lt;.</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>49</x>
-      <y>112</y>
-      <w>105</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;enum&gt;&gt;
-TypePlat
---
-SANTE
-ENFANT
-AUTRE</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>28</x>
-      <y>259</y>
-      <w>259</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>PlatFactory
---
-+getPlat(TypePlat, int, String, double):PlatAuMenu (static)
-bg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>105</x>
-      <y>175</y>
-      <w>21</w>
-      <h>98</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>280</x>
-      <y>280</y>
-      <w>245</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>330.0;100.0;130.0;100.0;130.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
