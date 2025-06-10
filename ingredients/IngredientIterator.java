@@ -3,16 +3,16 @@ package ingredients;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class IngredientIterator implements Iterable<Ingredient> {
+public class IngredientIterator implements Iterable<IngredientPlat> {
 
-    ArrayList<Ingredient> ingredients = new ArrayList<>();
+    ArrayList<IngredientPlat> ingredients = new ArrayList<>();
 
-    public void addIngredient(Ingredient ingredient) {
+    public void addIngredient(IngredientPlat ingredient) {
         ingredients.add(ingredient);
     }
 
     @Override
-    public Iterator<Ingredient> iterator() {
+    public Iterator<IngredientPlat> iterator() {
         return ingredients.iterator();
     }
 

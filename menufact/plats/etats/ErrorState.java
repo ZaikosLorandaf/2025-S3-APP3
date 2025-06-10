@@ -7,7 +7,7 @@ public class ErrorState implements PlatState {
 
     @Override
     public void treatement(PlatChoisi plat){
-
+        System.out.println("ErrorState: treatement");
     }
 
     @Override

@@ -52,4 +52,8 @@ public class Inventaire {
         lesIngredients.get(lesIngredients.indexOf(ingredient)).setQuantity(quantity);
     }
 
+    public int getQuantity(Ingredient ingredient) {
+        return lesIngredients.get(lesIngredients.indexOf(ingredient)).getQuantity();
+    }
+
 }

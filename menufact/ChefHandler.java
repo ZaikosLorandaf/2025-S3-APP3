@@ -11,6 +11,15 @@ public class ChefHandler {
 
     private PlatChoisi platChoisi;
 
+    private static ChefHandler instance = null;
+
+    public static ChefHandler getInstance() {
+        if (instance == null) {
+            instance = new ChefHandler();
+        }
+        return instance;
+    }
+
     public void setPlatChoisi(PlatChoisi platChoisi) {
         this.platChoisi = platChoisi;
 
