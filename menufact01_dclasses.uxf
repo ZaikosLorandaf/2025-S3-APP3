@@ -37,7 +37,7 @@
 -date:Date
 -description:String
 -etat:FactureEtat
--platchosi:ArrayList&lt;PlatChoisi&gt;
+-platchosi:PlatIterator
 -courant:int
 -client:Client
 --
@@ -150,12 +150,12 @@ lt=&lt;.</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>846</x>
-      <y>258</y>
-      <w>444</w>
-      <h>66</h>
+      <y>306</y>
+      <w>570</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;720.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;930.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -218,7 +218,7 @@ lt=&lt;.</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1278</x>
+      <x>1404</x>
       <y>198</y>
       <w>168</w>
       <h>132</h>
@@ -384,7 +384,7 @@ innerclass}</panel_attributes>
     <coordinates>
       <x>690</x>
       <y>0</y>
-      <w>528</w>
+      <w>702</w>
       <h>498</h>
     </coordinates>
     <panel_attributes>facture</panel_attributes>
@@ -830,21 +830,21 @@ AUTRE</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
+      <x>348</x>
       <y>114</y>
-      <w>120</w>
+      <w>102</w>
       <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>210</x>
+      <x>228</x>
       <y>108</y>
       <w>126</w>
-      <h>24</h>
+      <h>30</h>
     </coordinates>
     <panel_attributes>menufact.plats.etats.PlatState
 --
@@ -1166,5 +1166,57 @@ lt=&lt;.</panel_attributes>
     <panel_attributes>&lt;&lt;extend&gt;&gt;
 lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;190.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1164</x>
+      <y>150</y>
+      <w>162</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>PlatIterator
+--
+-plats:ArrayList
+--
++add(PlatChoisi):void
++iterator():Iterator
++toString():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1176</x>
+      <y>90</y>
+      <w>126</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>java.util.Iterator
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1230</x>
+      <y>108</y>
+      <w>18</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>240</y>
+      <w>408</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>660.0;10.0;660.0;60.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>
