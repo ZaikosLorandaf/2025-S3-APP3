@@ -27,7 +27,11 @@ public class FactureController {
         facture.ajoutePlat(plat);
     }
 
-    public String getFacture() {
+    public Facture getFacture() {
+        return facture;
+    }
+
+    public String genererFacture() {
         return facture.genererFacture();
     }
 }
