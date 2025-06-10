@@ -84,7 +84,7 @@ public class Ingredient {
      * @throws NegativeQuantity Si le nombre est négatif, lance une exception
      */
     public void substractIngredient(int quantity) throws NegativeQuantity {
-        if (quantity < 0)
+        if (quantity < 0 || quantity > this.quantity)
             throw new NegativeQuantity("Quantite d'ingredient: " + this.nom + " est insuffisante");
         this.quantity -= quantity;
     }
