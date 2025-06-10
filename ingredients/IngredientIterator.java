@@ -15,4 +15,9 @@ public class IngredientIterator implements Iterable<Ingredient> {
     public Iterator<Ingredient> iterator() {
         return ingredients.iterator();
     }
+
+    @Override
+    public String toString() {
+        return ingredients.toString();
+    }
 }
