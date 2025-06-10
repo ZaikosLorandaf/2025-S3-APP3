@@ -3,6 +3,7 @@ package menufact.facture;
 import menufact.Client;
 import menufact.facture.exceptions.FactureException;
 import menufact.plats.PlatChoisi;
+import menufact.plats.etats.ErrorState;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,8 +42,12 @@ public class Facture {
     public double sousTotal()
     {
         double soustotal=0;
-        for (PlatChoisi p : plats)
+        for (PlatChoisi p : plats) {
+            if (p.getState() instanceof ErrorState) {
+                continue;
+            }
             soustotal += p.getQuantite() * p.getPlat().getPrix();
+        }
         return soustotal;
     }
 
@@ -169,6 +174,9 @@ public class Facture {
         factureGenere += "Seq   Plat         Prix   Quantite\n";
         for (PlatChoisi plat : plats)
         {
+            if(plat.getState() instanceof ErrorState ) {
+                continue;
+            }
             factureGenere +=  i + "     " + plat.getPlat().getDescription() +  "  " + plat.getPlat().getPrix() +  "      " + plat.getQuantite() + "\n";
             i++;
         }

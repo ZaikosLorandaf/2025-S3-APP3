@@ -37,6 +37,10 @@ public class PlatChoisi {
         state.treatement(this);
     }
 
+    public PlatState getState() {
+        return state;
+    }
+
     @Override
     public String toString() {
         return "menufact.plats.PlatChoisi{" +

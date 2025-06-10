@@ -146,6 +146,13 @@ public class TestUnitaires {
         facController.payeFacture();
         System.out.println(facController.genererFacture());
 
+        System.out.println("-------OUVERTURE DE FACTURE PAYE-------------");
+        try {
+            facController.ouvrirFacture();
+        } catch (FactureException e) {
+            System.out.println(e);
+        }
+
 
     }
 }
