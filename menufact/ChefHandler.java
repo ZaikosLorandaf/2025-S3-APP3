@@ -1,6 +1,7 @@
 package menufact;
 
 import menufact.plats.PlatChoisi;
+import menufact.plats.PlatException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class ChefHandler {
         return instance;
     }
 
-    public void setPlatChoisi(PlatChoisi platChoisi) {
+    public void setPlatChoisi(PlatChoisi platChoisi) throws PlatException {
         this.platChoisi = platChoisi;
         notifyObservers();
 
@@ -34,7 +35,7 @@ public class ChefHandler {
         observers.remove(observer);
     }
 
-    public void notifyObservers() {
+    public void notifyObservers() throws PlatException {
         for (Observer observer : observers) {
             observer.update(platChoisi);
         }

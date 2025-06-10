@@ -15,9 +15,10 @@ public class Chef implements Observer {
     }
 
     @Override
-    public void update(PlatChoisi platChoisi) {
+    public void update(PlatChoisi platChoisi) throws PlatException {
         System.out.println("Chef update");
         this.plat = platChoisi;
+        traiter();
     }
 
 

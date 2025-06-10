@@ -484,7 +484,7 @@ Observer
       <x>176</x>
       <y>840</y>
       <w>224</w>
-      <h>112</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>ChefHandler
 --
@@ -793,9 +793,9 @@ AUTRE</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1256</x>
-      <y>200</y>
+      <y>176</y>
       <w>216</w>
-      <h>128</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>FactureController
 --
@@ -806,6 +806,9 @@ AUTRE</panel_attributes>
 +displayFacture():void
 +setClient(Client):void
 +addPlat(PlatChoisi):void
++fermerFacture():voide
++ouvrirFacture():void
++payeFacture():void
 +getFacture():String</panel_attributes>
     <additional_attributes/>
   </element>
@@ -813,12 +816,12 @@ AUTRE</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1128</x>
-      <y>320</y>
+      <y>328</y>
       <w>256</w>
-      <h>96</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;&gt;&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;100.0;300.0;100.0;300.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;300.0;90.0;300.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -826,10 +829,10 @@ AUTRE</panel_attributes>
       <x>1360</x>
       <y>128</y>
       <w>24</w>
-      <h>88</h>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -1306,5 +1309,29 @@ lt=&lt;.</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.&gt;</panel_attributes>
     <additional_attributes>670.0;40.0;600.0;40.0;600.0;160.0;10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1624</x>
+      <y>1072</y>
+      <w>304</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>IngredientFactory
+--
++getIngredient(TypeIngredient, String, String):void (static)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1200</x>
+      <y>1104</y>
+      <w>592</w>
+      <h>448</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;430.0;10.0;540.0;400.0;540.0;400.0;360.0;720.0;360.0;720.0;10.0</additional_attributes>
   </element>
 </diagram>

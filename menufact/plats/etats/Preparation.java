@@ -14,6 +14,7 @@ public class Preparation implements PlatState {
             if(Inventaire.getInstance().getQuantity(ing.getIngredient()) < ing.getQuantity()*plat.getQuantite()){
                 //Pas assez d'ingrédient
                 plat.setEtat(new ErrorState());
+                return;
             }
         }
 

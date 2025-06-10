@@ -15,9 +15,13 @@ public class Menu {
         this.description = description;
     }
 
-    public static Menu getSingleton(String description, int courant) {
+    private Menu(){
+        courant = -1;
+    }
+
+    public static Menu getSingleton(String description) {
        if (singleton == null)
-           singleton = new Menu(description, courant);
+           singleton = new Menu(description, -1);
        return singleton;
    }
 
