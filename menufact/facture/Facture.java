@@ -16,7 +16,7 @@ public class Facture {
     private Date date;
     private String description;
     private FactureEtat etat;
-    private ArrayList<PlatChoisi> platchoisi = new ArrayList<PlatChoisi>();
+    private PlatIterator plats = new PlatIterator();
     private int courant;
     private Client client;
 
@@ -125,7 +125,7 @@ public class Facture {
     public void ajoutePlat(PlatChoisi p) throws FactureException
     {
         if (etat == FactureEtat.OUVERTE)
-            platchoisi.add(p);
+            plats.add(p);
         else
             throw new FactureException("On peut ajouter un plat seulement sur une facture OUVERTE.");
     }
@@ -140,7 +140,7 @@ public class Facture {
                 "date=" + date +
                 ", description='" + description + '\'' +
                 ", etat=" + etat +
-                ", platchoisi=" + platchoisi +
+                ", platchoisi=" + plats.toString() +
                 ", courant=" + courant +
                 ", client=" + client +
                 ", TPS=" + TPS +
@@ -167,7 +167,7 @@ public class Facture {
                 "Les plats commandes:" + "\n" + lesPlats;
 
         factureGenere += "Seq   Plat         Prix   Quantite\n";
-        for (PlatChoisi plat : platchoisi)
+        for (PlatChoisi plat : plats)
         {
             factureGenere +=  i + "     " + plat.getPlat().getDescription() +  "  " + plat.getPlat().getPrix() +  "      " + plat.getQuantite() + "\n";
             i++;
