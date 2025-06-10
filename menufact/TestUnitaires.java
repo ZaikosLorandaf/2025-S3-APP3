@@ -47,6 +47,11 @@ public class TestUnitaires {
         steakFriteSalade.addIngredient(new IngredientPlat(salade, 2));
         steakFriteSalade.addIngredient(new IngredientPlat(steak,1));
 
+        fritesSalade.addIngredient(new IngredientPlat(frite,2));
+        fritesSalade.addIngredient(new IngredientPlat(salade,1));
+
+        saladeCesar.addIngredient(new IngredientPlat(salade,2));
+
         Menu.getSingleton("MENU").ajoute(steakFriteSalade);
         Menu.getSingleton("MENU").ajoute(saladeCesar);
         Menu.getSingleton("MENU").ajoute(fritesSalade);
@@ -80,11 +85,66 @@ public class TestUnitaires {
             System.out.println(e);
         }
 
-        System.out.println("-------------INVENTAIRE FINAL---------------");
+        System.out.println("-------------INVENTAIRE FINAL 1---------------");
         System.out.println(Inventaire.getInstance());
 
 
+        System.out.println("-----------ESSAIE PLAT AVEC MANQUE D'INGREG ----------");
+
+        try {
+            facController.addPlat(new PlatChoisi.PlatChoisiBuilder().setPlat(fritesSalade).setQuantite(1).build());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        try {
+            Marc.traiter();
+            System.out.println(Marc);
+            Marc.traiter();
+            System.out.println(Marc);
+        } catch (PlatException e) {
+            System.out.println(e);
+        }
+
+        System.out.println("------ESSAIE AJOUTER QTE NEG-------------------");
+        try{
+            Inventaire.getInstance().setQuantity(frite, -1);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+
+        System.out.println("-----------ESSAIE PLAT SANTE ----------");
+
+        try {
+            facController.addPlat(new PlatChoisi.PlatChoisiBuilder().setPlat(saladeCesar).setQuantite(3).build());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        try {
+            Marc.traiter();
+            System.out.println(Marc);
+            Marc.traiter();
+            System.out.println(Marc);
+        } catch (PlatException e) {
+            System.out.println(e);
+        }
+
+        System.out.println("-------------INVENTAIRE FINAL 2---------------");
+        System.out.println(Inventaire.getInstance());
+
+        System.out.println("-------FERMER LA FACTURE -------");
+
         facController.displayFacture();
+        System.out.println("-------------FACTURE ETAT FINAL---------------");
+
+        facController.fermerFacture();
+        facController.displayFacture();
+
+        System.out.println("-------PAYER LA FACTURE-------");
+        facController.payeFacture();
+        System.out.println(facController.genererFacture());
 
 
     }
