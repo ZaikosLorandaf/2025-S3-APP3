@@ -1,9 +1,9 @@
 package menufact.facture;
 
+import org.junit.jupiter.api.Test;
 import menufact.facture.exceptions.FactureException;
 import menufact.plats.PlatChoisi;
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 //import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,7 +16,7 @@ public class FactureTest {
             facture.payer();
             facture.ouvrir();
         }catch (Exception e){
-            Assert.assertTrue(true);
+            assertTrue(true);
         }
     }
 
@@ -25,10 +25,9 @@ public class FactureTest {
         Facture facture = new Facture("TEST");
         try {
             facture.ajoutePlat(null);
-            Assert.assertTrue(true);
+            assertTrue(true);
         } catch (FactureException e) {
-            throw new RuntimeException(e);
+            fail();
         }
-
     }
 }
