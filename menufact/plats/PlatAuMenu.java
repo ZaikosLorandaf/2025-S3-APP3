@@ -65,23 +65,42 @@ public class PlatAuMenu {
         return description;
     }
 
-
+    /**
+     * Modifie la description
+     * @param description la nouvelle descirption
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
+    /**
+     *
+     * @return Le prix
+     */
     public double getPrix() {
         return prix;
     }
 
+    /**
+     * Modifie le prix
+     * @param prix Le nouveau prix
+     */
     public void setPrix(double prix) {
         this.prix = prix;
     }
 
+    /**
+     * Ajoute des ingrédients au plat
+     * @param ingredient l'ingrédient
+     */
     public void addIngredient(IngredientPlat ingredient) {
         ingredients.addIngredient(ingredient);
     }
 
+    /**
+     * Retourne l'itérateur
+     * @return l'itérateur
+     */
     public IngredientIterator getIngredients() {
         return ingredients;
     }

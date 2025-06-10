@@ -11,6 +11,11 @@ public class Menu {
     private int courant;
     private ArrayList<PlatAuMenu> plat = new ArrayList<PlatAuMenu>();
 
+    /**
+     * Cette classe Créer un menu pour afficher les plats
+     * @param description
+     * @param courant
+     */
     private Menu(String description, int courant) {
         this.description = description;
     }
@@ -19,24 +24,45 @@ public class Menu {
         courant = -1;
     }
 
+    /**
+     * Fabrique et retourne une instance de menu (singleton)
+     * @param description la description du menu
+     * @return l'instance de Menu
+     */
     public static Menu getSingleton(String description) {
        if (singleton == null)
            singleton = new Menu(description, -1);
        return singleton;
    }
 
+    /**
+     * Ajoute un plat au menu
+     * @param p Le plat
+     */
     void ajoute(PlatAuMenu p) {
         plat.add(p);
     }
 
+    /**
+     * Change la position de l'itération
+     * @param i la nouvelle position
+     */
     public void position(int i) {
         courant = i;
     }
 
+    /**
+     * Donne le plat courant
+     * @return Le plat courant
+     */
     public PlatAuMenu platCourant() {
         return plat.get(courant);
     }
 
+    /**
+     * Change la position du plat courant
+     * @throws MenuException Si le courant dépasse la taille du tableau, lance une exception
+     */
     public void positionSuivante() throws MenuException {
         if (courant + 1 >= plat.size())
             throw new MenuException("On depasse le nombre maximale de plats.");
@@ -44,6 +70,10 @@ public class Menu {
             courant++;
     }
 
+    /**
+     * Change la position du plat courant
+     * @throws MenuException si le courant est négatif, lance une exception
+     */
     public void positionPrecedente() throws MenuException {
         if (courant - 1 < 0)
             throw new MenuException("On depasse le nombre minimale de plats");

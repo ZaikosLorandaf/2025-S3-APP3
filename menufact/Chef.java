@@ -9,6 +9,10 @@ public class Chef implements Observer {
 
     private PlatChoisi plat;
 
+    /**
+     * Cette classe créer un chef (observer) pour faire les plats
+     * @param name le nom du chef
+     */
     public Chef(String name) {
         this.name = name;
         this.plat = null;
@@ -22,20 +26,36 @@ public class Chef implements Observer {
     }
 
 
+    /**
+     *
+     * @return Le nom
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Modifie le nom
+     * @param name nouveau nom
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Traite la commande
+     * @throws PlatException Si le plat est null, lance une exception
+     */
     public void traiter() throws PlatException {
         if(plat == null){ return; }
 
         plat.treated();
     }
 
+    /**
+     *
+     * @return Le plat
+     */
     public PlatChoisi getPlat() {return plat;}
 
     @Override
