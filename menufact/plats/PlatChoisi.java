@@ -37,6 +37,10 @@ public class PlatChoisi {
         state.treatement(this);
     }
 
+    /**
+     * Retourne l'état
+     * @return L'état du plat
+     */
     public PlatState getState() {
         return state;
     }
