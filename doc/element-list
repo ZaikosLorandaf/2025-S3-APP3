@@ -5,6 +5,5 @@ menufact
 menufact.exceptions
 menufact.facture
 menufact.facture.exceptions
-menufact.facture.states
 menufact.plats
 menufact.plats.etats
