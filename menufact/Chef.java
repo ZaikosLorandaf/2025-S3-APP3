@@ -39,7 +39,12 @@ public class Chef implements Observer {
 
     @Override
     public String toString() {
-        return "Chef{" + "name=" + name + ", plat=" + plat.toString() + '}';
+        if(plat == null) {
+            return "Chef{" + "name=" + name + ", plat=" + "aucun" + '}';
+        }else{
+            return "Chef{" + "name=" + name + ", plat=" + plat.toString() + '}';
+        }
+
     }
 
 

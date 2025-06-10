@@ -56,4 +56,9 @@ public class Inventaire {
         return lesIngredients.get(lesIngredients.indexOf(ingredient)).getQuantity();
     }
 
+    @Override
+    public String toString() {
+        return lesIngredients.toString();
+    }
+
 }

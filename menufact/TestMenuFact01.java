@@ -7,7 +7,7 @@ import menufact.plats.PlatSante;
 
 public class TestMenuFact01 {
     public static void main(String[] args) {
-        try {
+        /*try {
             System.out.println("===menufact.plats.PlatAuMenu Constructeur 3 arguments");
             PlatAuMenu p1 = new PlatAuMenu(0, "Frites sauce", 11.50);
             System.out.println(p1);
@@ -81,7 +81,7 @@ public class TestMenuFact01 {
             System.out.println("Etat = " + facture.getEtat());
         } catch (Exception fe) {
             System.out.println(fe.getMessage());
-        }
+        }*/
 
     }
 }

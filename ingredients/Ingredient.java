@@ -51,4 +51,9 @@ public class Ingredient {
     public void addIngredient(int quantity) {
         this.quantity += quantity;
     }
+
+    @Override
+    public String toString() {
+        return "Ingredient {nom="+ nom + ", description=" + description + ", typeIngredient=" + typeIngredient + ", quantity=" + quantity + "}";
+    }
 }

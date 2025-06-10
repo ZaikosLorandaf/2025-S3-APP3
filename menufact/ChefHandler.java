@@ -22,6 +22,7 @@ public class ChefHandler {
 
     public void setPlatChoisi(PlatChoisi platChoisi) {
         this.platChoisi = platChoisi;
+        notifyObservers();
 
     }
 
@@ -37,5 +38,10 @@ public class ChefHandler {
         for (Observer observer : observers) {
             observer.update(platChoisi);
         }
+    }
+
+    @Override
+    public String toString() {
+        return observers.toString();
     }
 }
