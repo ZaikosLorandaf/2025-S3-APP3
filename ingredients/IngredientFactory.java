@@ -4,6 +4,13 @@ import menufact.exceptions.NegativeQuantity;
 
 public class IngredientFactory {
 
+    /**
+     * Cette fonction créer un modèle de base pour les ingrédients
+     * @param type Type d'ingrédient
+     * @param name Nom de l'ingrédient
+     * @param description Description
+     * @return Retourne une instance de l'ingrédient
+     */
     public static Ingredient getIngredient(TypeIngredient type, String name, String description) {
         Ingredient ingredient;
         switch (type) {

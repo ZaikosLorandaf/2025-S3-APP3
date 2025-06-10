@@ -2,6 +2,14 @@ package menufact.plats;
 
 public class PlatFactory {
 
+    /**
+     * Construit une instance pour un type de plat (DEPRECATED)
+     * @deprecated NE PAS UTILISER
+     * @param code
+     * @param description
+     * @param price
+     * @return
+     */
     public static PlatAuMenu getPlat(TypePlat plat, int code, String description, double price) {
         PlatAuMenu platAuMenu;
         switch (plat) {
