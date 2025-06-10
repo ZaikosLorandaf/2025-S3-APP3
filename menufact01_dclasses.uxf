@@ -874,7 +874,9 @@ layer=-1</panel_attributes>
     <panel_attributes>Inventaire
 --
 - Ingredient: ArrayList &lt;Ingredient&gt;
+-instance:Inventaire (static)
 --
++getInstance():Inventaire (static)
 + nouveau(Ingredient): void
 + nouveau(Ingredient, int): void
 + suprimer(Ingredient): void

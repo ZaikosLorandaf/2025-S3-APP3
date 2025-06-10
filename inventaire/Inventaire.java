@@ -9,6 +9,15 @@ import java.util.ArrayList;
 public class Inventaire {
     private ArrayList<Ingredient> lesIngredients = new ArrayList<Ingredient>();
 
+    private static Inventaire instance = null;
+
+    public static Inventaire getInstance() {
+        if (instance == null) {
+            instance = new Inventaire();
+        }
+        return instance;
+    }
+
     public void nouveau(Ingredient ingredient) throws IngredientException {
         if (lesIngredients.contains(ingredient))
             throw new IngredientException("L'ingredient " + ingredient + " existe deja");

@@ -41,7 +41,7 @@ public class Facture {
     public double sousTotal()
     {
         double soustotal=0;
-        for (PlatChoisi p : platchoisi)
+        for (PlatChoisi p : plats)
             soustotal += p.getQuantite() * p.getPlat().getPrix();
         return soustotal;
     }
